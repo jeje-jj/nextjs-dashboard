@@ -1,14 +1,10 @@
-import SideNav from "@/app/ui/dashboard/sidenav";
-import React from "react";
+import SideNav from '@/app/ui/dashboard/sidenav';
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <section>
-      {children}
-    </section>
+    <div className="flex h-screen flex-col md:flex-row">
+      <SideNav />
+      <div className="flex-1 p-6">{children}</div>
+    </div>
   );
 }
